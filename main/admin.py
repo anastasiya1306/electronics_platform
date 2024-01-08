@@ -25,4 +25,3 @@ class NetworkAdmin(admin.ModelAdmin):
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['name', 'model', 'date_release', 'network', 'created_at']
-    list_filter = ['name']
