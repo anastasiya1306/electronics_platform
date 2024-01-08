@@ -13,15 +13,13 @@ class ProviderAdmin(admin.ModelAdmin):
     def clear_arrears(self, request, queryset):
         """Очищаем задолженность"""
         queryset.update(arrears=0)
-
-    clear_arrears.short_description = "Очистить задолженность"
+    clear_arrears.short_description = "Очистить задолженность перед поставщиком"
 
 
 @admin.register(Network)
 class NetworkAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'country', 'city', 'street', 'house_number', 'provider']
     list_filter = ['city']
-    search_fields = ['name']
     raw_id_fields = ['provider']  # перегружаем виджет отображения, который не делает лишних запросов в БД
 
 
@@ -29,5 +27,4 @@ class NetworkAdmin(admin.ModelAdmin):
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['name', 'model', 'date_release', 'network', 'created_at']
     list_filter = ['name']
-    search_fields = ['name']
-    raw_id_fields = ['network']
+    raw_id_fields = ['network']  # перегружаем виджет отображения, который не делает лишних запросов в БД
