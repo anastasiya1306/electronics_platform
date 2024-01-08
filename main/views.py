@@ -19,10 +19,8 @@ class ProviderViewSet(viewsets.ModelViewSet):
         instance = self.get_object()
         serializer = self.get_serializer(instance, data=request.data, partial=partial)
         serializer.is_valid(raise_exception=True)
-
         if 'arrears' in serializer.validated_data:
             serializer.validated_data.pop('arrears')
-
         self.perform_update(serializer)
 
         return Response(serializer.data)
