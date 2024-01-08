@@ -1,0 +1,116 @@
+[
+  {
+    "model": "main.provider",
+    "pk": 14,
+    "fields": {
+      "name": "iTech HK",
+      "email": "info@itech-hk.com",
+      "country": "Китай",
+      "city": "Гонконг",
+      "street": "THE HENNESSY 252",
+      "house_number": "6",
+      "arrears": "2222.04"
+    }
+  },
+  {
+    "model": "main.provider",
+    "pk": 15,
+    "fields": {
+      "name": "ITANIUM",
+      "email": "info@itanium.kz",
+      "country": "Казахстан",
+      "city": "Алматы",
+      "street": "просп. СУЮНБАЯ",
+      "house_number": "14",
+      "arrears": "13000.16"
+    }
+  },
+  {
+    "model": "main.provider",
+    "pk": 16,
+    "fields": {
+      "name": "Лаборатория Электроники",
+      "email": "laboratoriya@mail.ru",
+      "country": "Россия",
+      "city": "Москва",
+      "street": "5-я Кожуховская",
+      "house_number": "9",
+      "arrears": "4578.00"
+    }
+  },
+  {
+    "model": "main.network",
+    "pk": 2,
+    "fields": {
+      "name": "network1",
+      "email": "network1@mail.ru",
+      "country": "Россия",
+      "city": "Москва",
+      "street": "Железнодорожная",
+      "house_number": "45",
+      "provider": 14,
+      "level": 0
+    }
+  },
+  {
+    "model": "main.network",
+    "pk": 3,
+    "fields": {
+      "name": "network2",
+      "email": "network2@skypro.com",
+      "country": "Россия",
+      "city": "Казань",
+      "street": "Царская",
+      "house_number": "13",
+      "provider": 16,
+      "level": 2
+    }
+  },
+  {
+    "model": "main.network",
+    "pk": 4,
+    "fields": {
+      "name": "network3",
+      "email": "network3@test.com",
+      "country": "Россия",
+      "city": "Москва",
+      "street": "Тверская",
+      "house_number": "45",
+      "provider": 14,
+      "level": 1
+    }
+  },
+  {
+    "model": "main.product",
+    "pk": 1,
+    "fields": {
+      "name": "Телефон Samsung",
+      "model": "S21",
+      "date_release": "2023-12-10",
+      "network": 4,
+      "created_at": "2024-01-08T19:50:11.489Z"
+    }
+  },
+  {
+    "model": "main.product",
+    "pk": 2,
+    "fields": {
+      "name": "Ноутбук Honor",
+      "model": "MagicBook X 16",
+      "date_release": "2022-09-15",
+      "network": 2,
+      "created_at": "2024-01-08T19:51:28.269Z"
+    }
+  },
+  {
+    "model": "main.product",
+    "pk": 3,
+    "fields": {
+      "name": "Телевизор Samsung",
+      "model": "QE55QN90BAU",
+      "date_release": "2021-07-12",
+      "network": 2,
+      "created_at": "2024-01-08T19:52:21.322Z"
+    }
+  }
+]
