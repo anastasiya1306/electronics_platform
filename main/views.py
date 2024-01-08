@@ -10,11 +10,12 @@ from main.serializers import ProviderSerializers, NetworkSerializers, ProductSer
 class ProviderViewSet(viewsets.ModelViewSet):
     serializer_class = ProviderSerializers
     queryset = Provider.objects.all()
-    filter_backends = [SearchFilter]
+    filter_backends = [SearchFilter]  # фильтр поиска по стране
     filterset_fields = ['country']
     permission_classes = [IsActive]
 
     def update(self, request, *args, **kwargs):
+        """Запрещено обновление через API поля «Задолженность перед поставщиком»"""
         partial = kwargs.pop('partial', False)
         instance = self.get_object()
         serializer = self.get_serializer(instance, data=request.data, partial=partial)
